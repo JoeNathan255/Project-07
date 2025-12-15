@@ -21,9 +21,11 @@ Assets, or resources used
 ## Special Focus
 What is your special focus? What did you do for it? How would you rate your own effort? 1-5. (I will agree or disagree with this sentiment, but I want to know what you thought)
 
-## References
+My special focus was animation: I drew sprite sheets in GIMP for the player (12 states, 17 unique frames), the button (2 states & frames), the dithering level transition (8 frames), and the animated background (3 frames).
+I wanted the player to feel over-the-top bouncy for visual interest. In order to incorporate the anticipation, follow through, and squash and stretch I wanted, I based the player's state machine on 7 booleans and triggers, and it ended up pretty sophisticated (It also took up almost half my time on the project). I think the project as a whole (being made in a day) is rough around the edges, but I would call this part a 4, I think.
 
-## Future Development
+## References
+2D character controller by Sebastian Lague: https://github.com/SebLague/2DPlatformer-Tutorial
 
 # Created by
 Jonathan Staten
