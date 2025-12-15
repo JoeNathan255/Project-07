@@ -42,4 +42,5 @@ thematic (one button in/inspiring the game)
 - button at the end of a level, changes level each time pressed
 - - manageable scope
   - focus on art and juiciness?
-  - level design biggest concern
+  - - animation w/ state machine? I need to practice that
+  - level design is a concern
