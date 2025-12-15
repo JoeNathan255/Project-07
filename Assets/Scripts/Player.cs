@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour {
@@ -7,9 +8,9 @@ public class Player : MonoBehaviour {
 	public float maxJumpHeight = 4;
 	public float minJumpHeight = 1;
 	public float timeToJumpApex = .4f;
-	float accelerationTimeAirborne = .2f;
-	float accelerationTimeGrounded = .1f;
-	float moveSpeed = 6;
+	public float accelerationTimeAirborne = .2f;
+	public float accelerationTimeGrounded = .1f;
+	public float moveSpeed = 6;
 
 	public Vector2 wallJumpClimb;
 	public Vector2 wallJumpOff;
@@ -28,8 +29,13 @@ public class Player : MonoBehaviour {
 	Controller2D controller;
 
 	Vector2 directionalInput;
-	bool wallSliding;
+	public bool wallSliding;
 	int wallDirX;
+
+	// my code >:)
+	public bool touchingWall;
+	public bool touchingFloor;
+	public bool touchingCeiling;
 
 	void Start() {
 		controller = GetComponent<Controller2D> ();
@@ -52,6 +58,15 @@ public class Player : MonoBehaviour {
 				velocity.y = 0;
 			}
 		}
+
+		// animation bools
+		touchingWall = controller.collisions.left || controller.collisions.right;
+		touchingFloor = controller.collisions.below;
+		touchingCeiling = controller.collisions.above;
+
+		Variables.Application.Set("touchingWall", touchingWall);
+		Variables.Application.Set("touchingFloor", touchingFloor);
+		Variables.Application.Set("touchingCeiling", touchingCeiling);
 	}
 
 	public void SetDirectionalInput (Vector2 input) {
