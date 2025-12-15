@@ -2,11 +2,14 @@
 MSCH-C220 Final Project
 
 ## Theme
-How you thought about or interpreted the theme
+I interpreted the theme thematically: The game is based around one button that regenerates the world around it when pressed.
 
 ## Game Play
 Objective
+Follow the instruction in the start menu and press the button until you can't anymore!
+
 Game-play instructions
+WASD or arrows to move, space to jump.
 
 ## What did you 
 Struggles or surprises you encountered during the development of the game
